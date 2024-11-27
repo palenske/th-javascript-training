@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite abaixo a frase que deseja converter em um array:</p>
+    <input id="box" placeholder="Converta a frase aqui">
+    <button onclick="splitSentence()">Converter</button>
+    <script>
+    
+     function splitSentence(){ 
+    let frase = document.getElementById("box").value;
+    let divisao = frase.split(' ');
+    alert("Resultado: "+ divisao);
+
+    } 
+    
+
+    </script>
+</body>
+</html>

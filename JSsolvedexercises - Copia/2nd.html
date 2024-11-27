@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="title">Digite as medidas(cm) do triângulo para calcular a sua área abaixo(números apenas):</p>
+    <input min="0.1" id="Altura" placeholder="Altura" type="number">
+    <input min="0.1" id="Base" placeholder="Base" type="number">
+    <button id="botão">Calcular</button>
+    <button id="Limpar">Limpar</button>
+    <script>
+
+            document.getElementById("Limpar")
+            .addEventListener("click", limparArea, false);
+
+            document.getElementById("botão")
+            .addEventListener("click", calcularArea, false);
+
+
+        function calcularArea(){
+
+            let altura = document.getElementById("Altura").value;
+            let base = document.getElementById("Base").value; 
+            const resultado = base * altura /2;
+
+        if( base <= 0 || altura <= 0){
+
+            alert("Não é possível realizar o cálculo com estes números.")
+
+        } else {
+
+            alert("A área do triângulo é: " + resultado + "cm².")
+            document.getElementById("title").innerText = "Obrigado!"
+        }}
+        
+        function limparArea(){
+           
+            let altura = document.getElementById("Altura").value = " ";
+            let base = document.getElementById("Base").value = " ";
+            document.getElementById("title").innerText = "Deseja realizar outro calculo?"
+            
+        }
+    </script>
+</body>
+</html>
